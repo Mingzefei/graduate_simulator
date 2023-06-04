@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Graduate Life Game</title>
+</head>
+<body>
+    <h1>Graduate Life Game</h1>
+    <p>Final state:</p>
+    <ul>
+        <li>Sanity: {{ state["san"] }}</li>
+        <li>Wealth: {{ state["wealth"] }}</li>
+        <li>Energy: {{ state["energy"] }}</li>
+        <li>Intimate: {{ state["intimate"] }}</li>
+        <li>Academic: {{ state["academic"] }}</li>
+    </ul>
+    <p>{{ state["endings"][0]["description"] }}</p>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Graduate Life Game</title>
+</head>
+<body>
+    <h1>Graduate Life Game</h1>
+    <p>Current situation: {{ state["event"]["description"] }}</p>
+    <p>Current state:</p>
+    <ul>
+        <li>Sanity: {{ state["san"] }}</li>
+        <li>Wealth: {{ state["wealth"] }}</li>
+        <li>Energy: {{ state["energy"] }}</li>
+        <li>Intimate: {{ state["intimate"] }}</li>
+        <li>Academic: {{ state["academic"] }}</li>
+    </ul>
+    <form method="POST">
+        {% for option in state["event"]["options"] %}
+        <input type="radio" id="{{ option }}" name="option" value="{{ option }}">
+        <label for="{{ option }}">{{ option }}</label><br>
+        {% endfor %}
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
