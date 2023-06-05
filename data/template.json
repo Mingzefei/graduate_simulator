@@ -1,0 +1,101 @@
+{
+  "scenes": [
+    {
+      "id": "f1",
+      "description": "你的朋友邀请你参加一个聚会，但你还有一些未完成的作业。请选择以下一个选项：",
+      "description_short": "邀请聚会",
+      "limit_time_range": "",
+      "the_previous_id": "",
+      "options": [
+        {
+          "text": "去参加聚会",
+          "result": {
+            "san": -10,
+            "wealth": -5,
+            "energy": 5,
+            "intimate": 0,
+            "academic": 0
+          },
+          "the_next_id": "f2"
+        },
+        {
+          "text": "去参加聚会",
+          "result": {
+            "san": -10,
+            "wealth": -5,
+            "energy": 5,
+            "intimate": 0,
+            "academic": 0
+          },
+          "the_next_id": "f4"
+        },
+        {
+          "text": "去参加聚会",
+          "result": {
+            "san": -10,
+            "wealth": -5,
+            "energy": 5,
+            "intimate": 0,
+            "academic": 0
+          },
+          "the_next_id": "f4"
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "description": "你的朋友邀请你参加一个聚会，但你还有一些未完成的作业。请选择以下一个选项：",
+      "description_short": "邀请聚会",
+      "limit_time_range": "",
+      "the_previous_id": "",
+      "options": [
+        {
+          "text": "去参加聚会",
+          "result": {
+            "san": -10,
+            "wealth": -5,
+            "energy": 5,
+            "intimate": 0,
+            "academic": 0
+          },
+          "the_next_id": "f2"
+        },
+        {
+          "text": "去参加聚会",
+          "result": {
+            "san": -10,
+            "wealth": -5,
+            "energy": 5,
+            "intimate": 0,
+            "academic": 0
+          },
+          "the_next_id": "f4"
+        },
+        {
+          "text": "去参加聚会",
+          "result": {
+            "san": -10,
+            "wealth": -5,
+            "energy": 5,
+            "intimate": 0,
+            "academic": 0
+          },
+          "the_next_id": "f4"
+        }
+      ]
+    }
+  ],
+  "ending": [
+    {
+      "id": "e-1",
+      "discription_short": "平平无奇",
+      "discription": "平平无奇平平无奇"
+    },
+
+    {
+      "id": "e-2",
+      "discription_short": "红色玫瑰",
+      "discription": "红色玫瑰红色玫瑰"
+    }
+  ]
+}

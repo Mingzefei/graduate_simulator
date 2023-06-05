@@ -34,7 +34,7 @@ class Game:
         # 结局（多个）
         self.endings = []
         # 事件库
-        with open('events.json', 'r', encoding='utf-8') as f:
+        with open('../data/processed/events.json', 'r', encoding='utf-8') as f:
             events_data = json.load(f)
             events_lib = events_data['events']
         self.events_lib = events_lib
@@ -51,8 +51,9 @@ class Game:
 
     def get_event(self):
         # 根据id获取当前事件
-        event = self.events_lib[self.event_id]
-        return event
+        for event in self.events_lib:
+            if event['id'] == self.event_id:
+                return event
 
     def update_dataframe(self, result):
         # 根据选项结果更新数值面板

@@ -1,0 +1,2386 @@
+{
+  "events": [
+    {
+      "id": "f-1",
+      "description": "我是一位刚踏入大学的新生。我背着沉甸甸的背包，迈着坚定的步伐，走进陌生的校园。张阳面对着各种新鲜的事物和未知的挑战，我决心要在这个舞台上展现自己的才华和勇气。",
+      "description_short": "入学",
+      "limit_time_range": "",
+      "the_previous_id": "",
+      "options": [
+        {
+          "text": "社交之路\n我决定主动融入社交圈子",
+          "result": {
+            "san": 3,
+            "wealth": -1,
+            "energy": -2,
+            "intimate": 0,
+            "academic": -1
+          },
+          "the_next_id": ""
+        },
+        {
+          "text": "学业拼搏\n我决定把学业放在首位",
+          "result": {
+            "san": 1,
+            "wealth": 2,
+            "energy": -2,
+            "intimate": 0,
+            "academic": 3
+          },
+          "the_next_id": ""
+        },
+        {
+          "text": "坚持爱好\n坚持自己的兴趣爱好并有所发展",
+          "result": {
+            "san": 3,
+            "wealth": -2,
+            "energy": -1,
+            "intimate": 2,
+            "academic": -1
+          },
+          "the_next_id": ""
+        }
+      ]
+    },
+    {
+      "id": "f-2",
+      "description": "导师为培养我的科研能力，要求我独立探索自己的研究方向。由于经验和能力不足，在阅读大量文献后，仍无法确定自己的研究方向，此时，我选择",
+      "description_short": "确定方向",
+      "limit_time_range": "",
+      "the_previous_id": "",
+      "options": [
+        {
+          "text": "与文献死磕，继续阅读文献（最终找到一个自己感兴趣的研究方向，但可能不容易毕业）",
+          "result": {
+            "san": -3,
+            "wealth": 0,
+            "energy": -4,
+            "intimate": 0,
+            "academic": 2
+          },
+          "the_next_id": ""
+        },
+        {
+          "text": "放弃找方向，开始摸鱼，由老师安排方向（由老师在开题前安排一个研究方向，研究方向可能自己并不感兴趣，但能够顺利毕业）",
+          "result": {
+            "san": 1,
+            "wealth": 0,
+            "energy": -1,
+            "intimate": 0,
+            "academic": 0
+          },
+          "the_next_id": ""
+        },
+        {
+          "text": "继续阅读文献的同时及时与老师、师兄们交流，不断迭代优化自己的方向（最终找到一个既感兴趣又容易出成果的研究方向）",
+          "result": {
+            "san": -2,
+            "wealth": 0,
+            "energy": -2,
+            "intimate": 0,
+            "academic": 3
+          },
+          "the_next_id": ""
+        }
+      ]
+    },
+    {
+      "id": "f-3",
+      "description": "研一的下半个学期即将步入尾声，各个课程的期末考试和大作业验收都已结束，转眼七月就要来临，我还和本科一样等待着暑假的到来。此时实验室的群中突然收到了老师发布的消息，告知大家由于xx项目的紧急程度，需要大家在实验室加班到八月份才可放假，暑假总长大约为14天左右。",
+      "description_short": "研究生第一个暑假",
+      "limit_time_range": "",
+      "the_previous_id": "",
+      "options": [
+        {
+          "text": "兴高采烈，能为实验室打工真是我的荣幸",
+          "result": {
+            "san": 2,
+            "wealth": 0,
+            "energy": -3,
+            "intimate": 0,
+            "academic": 1
+          },
+          "the_next_id": ""
+        },
+        {
+          "text": "感到崩溃，但是没有办法，只能听从安排",
+          "result": {
+            "san": -3,
+            "wealth": 0,
+            "energy": -3,
+            "intimate": 0,
+            "academic": 1
+          },
+          "the_next_id": ""
+        },
+        {
+          "text": "感到忿忿不平，直接润回家，拒绝加班",
+          "result": {
+            "san": -2,
+            "wealth": 0,
+            "energy": 0,
+            "intimate": 0,
+            "academic": -1
+          },
+          "the_next_id": ""
+        }
+      ]
+    },
+    {
+      "id": "f-4",
+      "description": "研二上学期我开始做自己的毕设开题，每天辛苦看论文，写文献综述，思考自己的创新点，技术路线，最后写自己的开题报告。",
+      "description_short": "开题",
+      "limit_time_range": "",
+      "the_previous_id": "",
+      "options": [
+        {
+          "text": "我选择了精心准备开题报告",
+          "result": {
+            "san": -4,
+            "wealth": 0,
+            "energy": -4,
+            "intimate": 0,
+            "academic": 3
+          },
+          "the_next_id": ""
+        },
+        {
+          "text": "我选择了正常准备开题报告",
+          "result": {
+            "san": -2,
+            "wealth": 0,
+            "energy": -2,
+            "intimate": 0,
+            "academic": 2
+          },
+          "the_next_id": ""
+        },
+        {
+          "text": "我选择了划水准备开题报告",
+          "result": {
+            "san": -1,
+            "wealth": 0,
+            "energy": -1,
+            "intimate": 0,
+            "academic": 1
+          },
+          "the_next_id": ""
+        }
+      ]
+    },
+    {
+      "id": "f-5",
+      "description": "研三上学期我开始做自己的毕设答辩，每天辛苦写代码，调试软件，并且写自己的毕业论文。同时还要找工作，对于在体制内外，城市，薪资展开了综合选择。",
+      "description_short": "毕业",
+      "limit_time_range": "",
+      "the_previous_id": "",
+      "options": [
+        {
+          "text": "我选择了北京的科研所工作",
+          "result": {
+            "san": -4,
+            "wealth": 3,
+            "energy": -4,
+            "intimate": 0,
+            "academic": 0
+          },
+          "the_next_id": ""
+        },
+        {
+          "text": "我选择了上海外企的工作",
+          "result": {
+            "san": -3,
+            "wealth": 3,
+            "energy": -3,
+            "intimate": 0,
+            "academic": 0
+          },
+          "the_next_id": ""
+        },
+        {
+          "text": "我选择了二线城市的划水工作",
+          "result": {
+            "san": -1,
+            "wealth": 2,
+            "energy": -1,
+            "intimate": 0,
+            "academic": 0
+          },
+          "the_next_id": ""
+        }
+      ]
+    },
+    {
+      "id": "ri-1",
+      "description": "一天，我刚到实验室，准备开始今天的学习，导师的电话来了，有个急需的办公用品，问我能不能现在帮他去一趟。",
+      "description_short": "给导师跑腿",
+      "limit_time_range": "",
+      "the_previous_id": "",
+      "options": [
+        {
+          "text": "我虽然有些不满，但还是答应了下来",
+          "result": {
+            "san": -1,
+            "wealth": 0,
+            "energy": -1,
+            "intimate": 0,
+            "academic": 0
+          },
+          "the_next_id": ""
+        },
+        {
+          "text": "我急忙编了一个自己有事的借口推脱掉",
+          "result": {
+            "san": 1,
+            "wealth": 0,
+            "energy": 0,
+            "intimate": 0,
+            "academic": 0
+          },
+          "the_next_id": ""
+        }
+      ]
+    },
+    {
+      "id": "ri-2",
+      "description": "一天，我正在实验室摸鱼，突然收到多条微信消息，是导师通知大家晚上要临时开组会，需要大家在组合上汇报近期科研进度和项目进度，问大家时间是否方便。",
+      "description_short": "开组会",
+      "limit_time_range": "",
+      "the_previous_id": "",
+      "options": [
+        {
+          "text": "看着自己缓慢的进度，我放下手机，开始赶工",
+          "result": {
+            "san": -1,
+            "wealth": 0,
+            "energy": -2,
+            "intimate": 0,
+            "academic": 1
+          },
+          "the_next_id": ""
+        },
+        {
+          "text": "看着自己缓慢的进度，我选择摆烂，听天由命",
+          "result": {
+            "san": 1,
+            "wealth": 0,
+            "energy": 0,
+            "intimate": 0,
+            "academic": 0
+          },
+          "the_next_id": ""
+        }
+      ]
+    },
+    {
+      "id": "ri-3",
+      "description": "今天，导师突然发微信告知需要我购买大量试验设备用于后续试验使用，需要我先自费垫付费用，后续再通过发票进行报销。",
+      "description_short": "购买试验设备",
+      "limit_time_range": "",
+      "the_previous_id": "",
+      "options": [
+        {
+          "text": "虽然自己余额不多，碍于面子也答应了下来",
+          "result": {
+            "san": -1,
+            "wealth": -2,
+            "energy": 0,
+            "intimate": 0,
+            "academic": 0
+          },
+          "the_next_id": ""
+        },
+        {
+          "text": "向老师表明自己余额不多，希望老师帮忙垫付",
+          "result": {
+            "san": -2,
+            "wealth": 0,
+            "energy": 0,
+            "intimate": 0,
+            "academic": 0
+          },
+          "the_next_id": ""
+        }
+      ]
+    },
+    {
+      "id": "ri-4",
+      "description": "今天，导师突然通知我要出京出差，让我迅速整理行李并安排交通事宜，同时要准备好这次出差需要的汇报报告和PPT等内容",
+      "description_short": "出差",
+      "limit_time_range": "",
+      "the_previous_id": "",
+      "options": [
+        {
+          "text": "急忙开始着手准备，对此次出差感到期待",
+          "result": {
+            "san": 1,
+            "wealth": 1,
+            "energy": -2,
+            "intimate": 0,
+            "academic": 1
+          },
+          "the_next_id": ""
+        },
+        {
+          "text": "很不情愿出差，但也不好拒绝，只能答应下来",
+          "result": {
+            "san": -2,
+            "wealth": 1,
+            "energy": -2,
+            "intimate": 0,
+            "academic": 0
+          },
+          "the_next_id": ""
+        },
+        {
+          "text": "极其不情愿，硬着头皮向导师表达想法",
+          "result": {
+            "san": -2,
+            "wealth": 0,
+            "energy": 0,
+            "intimate": 0,
+            "academic": 0
+          },
+          "the_next_id": ""
+        }
+      ]
+    },
+    {
+      "id": "ri-5",
+      "description": "今天，师兄在群里组织大家晚上一起去xxx餐厅聚餐，希望大家到时候都能按时到达。",
+      "description_short": "实验室聚餐",
+      "limit_time_range": "",
+      "the_previous_id": "",
+      "options": [
+        {
+          "text": "非常开心，在群内回复收到",
+          "result": {
+            "san": 1,
+            "wealth": -1,
+            "energy": -1,
+            "intimate": 0,
+            "academic": 0
+          },
+          "the_next_id": ""
+        },
+        {
+          "text": "社恐，在群里回复自己没有时间",
+          "result": {
+            "san": -1,
+            "wealth": 0,
+            "energy": 0,
+            "intimate": 0,
+            "academic": 0
+          },
+          "the_next_id": ""
+        }
+      ]
+    },
+    {
+      "id": "ri-6",
+      "description": "一天，我刚到实验室，准备开始今天的学习，导师的来到实验室找我，说XX项目有一份文件现在需要一个人送去，如果我没课没事情的话可以去一趟吗",
+      "description_short": "实验室送文件",
+      "limit_time_range": "",
+      "the_previous_id": "",
+      "options": [
+        {
+          "text": "我答应了下来",
+          "result": {
+            "san": -1,
+            "wealth": 1,
+            "energy": -1,
+            "intimate": 0,
+            "academic": 0
+          },
+          "the_next_id": ""
+        },
+        {
+          "text": "我以上课为理由拒绝了老师",
+          "result": {
+            "san": 1,
+            "wealth": 0,
+            "energy": 0,
+            "intimate": 0,
+            "academic": 0
+          },
+          "the_next_id": ""
+        }
+      ]
+    },
+    {
+      "id": "ri-7",
+      "description": "一天，我刚到实验室，准备开始今天的学习，导师的来到实验室找我，说XX项目现在需要一个人过去收集数据，如果我没课没事情的话可以去一趟吗",
+      "description_short": "实验室出差",
+      "limit_time_range": "",
+      "the_previous_id": "",
+      "options": [
+        {
+          "text": "我答应了下来",
+          "result": {
+            "san": -1,
+            "wealth": 1,
+            "energy": -1,
+            "intimate": 0,
+            "academic": 1
+          },
+          "the_next_id": ""
+        },
+        {
+          "text": "我以上课为理由拒绝了老师",
+          "result": {
+            "san": 2,
+            "wealth": 0,
+            "energy": 0,
+            "intimate": 0,
+            "academic": 0
+          },
+          "the_next_id": ""
+        }
+      ]
+    },
+    {
+      "id": "ri-8",
+      "description": "学期末老师组织了实验室团建，大家一起租个场地去轰趴，可以打牌打麻将玩桌游，烧烤唱歌等等，让大家如果有时间的话都去参加",
+      "description_short": "实验室团建",
+      "limit_time_range": "",
+      "the_previous_id": "",
+      "options": [
+        {
+          "text": "我答应了下来",
+          "result": {
+            "san": 2,
+            "wealth": 0,
+            "energy": -1,
+            "intimate": 0,
+            "academic": 0
+          },
+          "the_next_id": ""
+        },
+        {
+          "text": "我以有事情为理由拒绝了老师",
+          "result": {
+            "san": 0,
+            "wealth": 0,
+            "energy": 0,
+            "intimate": 0,
+            "academic": 0
+          },
+          "the_next_id": ""
+        }
+      ]
+    },
+    {
+      "id": "ri-9",
+      "description": "周末一天，我刚醒来，准备开始今天的玩耍，导师的微信消息来到，说XX项目有一份文件现在需要完成，如果我可以的话需要去加班",
+      "description_short": "实验室急活",
+      "limit_time_range": "",
+      "the_previous_id": "",
+      "options": [
+        {
+          "text": "我答应了下来",
+          "result": {
+            "san": -3,
+            "wealth": 0,
+            "energy": -2,
+            "intimate": 0,
+            "academic": 1
+          },
+          "the_next_id": ""
+        },
+        {
+          "text": "我以有事情为理由拒绝了老师",
+          "result": {
+            "san": 1,
+            "wealth": 0,
+            "energy": 0,
+            "intimate": 0,
+            "academic": 0
+          },
+          "the_next_id": ""
+        }
+      ]
+    },
+    {
+      "id": "ri-10",
+      "description": "项目节点来临，我们需要加班加点完成评审所需的工作",
+      "description_short": "项目节点",
+      "limit_time_range": "",
+      "the_previous_id": "",
+      "options": [
+        {
+          "text": "我加班加点熬夜完成",
+          "result": {
+            "san": -3,
+            "wealth": 0,
+            "energy": -2,
+            "intimate": 0,
+            "academic": 2
+          },
+          "the_next_id": ""
+        },
+        {
+          "text": "我正常完成工作",
+          "result": {
+            "san": -1,
+            "wealth": 0,
+            "energy": -1,
+            "intimate": 0,
+            "academic": 1
+          },
+          "the_next_id": ""
+        }
+      ]
+    },
+    {
+      "id": "ri-11",
+      "description": "我在某天意外遇到了一笔额外开销，如修理手机或临时医疗费用。这使得他的财务状况变得更加困难，他感受到了紧张和焦虑的情绪。",
+      "description_short": "财务困境",
+      "limit_time_range": "",
+      "the_previous_id": "",
+      "options": [
+        {
+          "text": "寻求家庭和朋友的帮助",
+          "result": {
+            "san": 2,
+            "wealth": -1,
+            "energy": -1,
+            "intimate": 0,
+            "academic": 0
+          },
+          "the_next_id": ""
+        },
+        {
+          "text": "为了奖学金，努力学习并兼职工作",
+          "result": {
+            "san": 3,
+            "wealth": -1,
+            "energy": -5,
+            "intimate": 0,
+            "academic": 2
+          },
+          "the_next_id": ""
+        },
+        {
+          "text": "焦虑致死，也不行动",
+          "result": {
+            "san": -10,
+            "wealth": -10,
+            "energy": 0,
+            "intimate": 0,
+            "academic": 0
+          },
+          "the_next_id": ""
+        }
+      ]
+    },
+    {
+      "id": "ri-12",
+      "description": "我他发现学校提供丰富的奖学金机会，考虑是否通过申请来实现自己的奖学金之梦",
+      "description_short": "申请奖学金",
+      "limit_time_range": "",
+      "the_previous_id": "",
+      "options": [
+        {
+          "text": "展现出优秀的学术成绩和领导能力，申请成功",
+          "result": {
+            "san": 1,
+            "wealth": 2,
+            "energy": -1,
+            "intimate": 0,
+            "academic": 1
+          },
+          "the_next_id": ""
+        },
+        {
+          "text": "尽管张明付出了巨大的努力，仍申请失败",
+          "result": {
+            "san": 2,
+            "wealth": 0,
+            "energy": -2,
+            "intimate": 0,
+            "academic": 1
+          },
+          "the_next_id": ""
+        },
+        {
+          "text": "未选择申请",
+          "result": {
+            "san": 0,
+            "wealth": 0,
+            "energy": 0,
+            "intimate": 0,
+            "academic": 0
+          },
+          "the_next_id": ""
+        }
+      ]
+    },
+    {
+      "id": "ri-13",
+      "description": "我在追求学业的同时，也面临着各种挑战和抉择。在一天与辅导员的交流后，我决定重新规划自己的大学方向。",
+      "description_short": "新的方向挑战",
+      "limit_time_range": "",
+      "the_previous_id": "",
+      "options": [
+        {
+          "text": "参加学术竞赛，牺牲一些休息时间和娱乐活动，以追求学术的突破。",
+          "result": {
+            "san": 1,
+            "wealth": 0,
+            "energy": -3,
+            "intimate": 0,
+            "academic": 3
+          },
+          "the_next_id": ""
+        },
+        {
+          "text": "考虑找一份兼职工作来赚取一些额外的收入",
+          "result": {
+            "san": 1,
+            "wealth": 3,
+            "energy": -3,
+            "intimate": 0,
+            "academic": -1
+          },
+          "the_next_id": ""
+        },
+        {
+          "text": "参加社团活动，结交新朋友，并提升综合能力",
+          "result": {
+            "san": 3,
+            "wealth": -1,
+            "energy": -3,
+            "intimate": 0,
+            "academic": -2
+          },
+          "the_next_id": ""
+        }
+      ]
+    },
+    {
+      "id": "ri-14",
+      "description": "学期末的考试临近，我感受到了巨大的学业压力。我努力学习，但同时也感到焦虑和疲惫。我需要在学业和心理健康之间找到平衡，以确保学习的效果和自身的精神健康。",
+      "description_short": "考试压力与心理健康",
+      "limit_time_range": "",
+      "the_previous_id": "",
+      "options": [
+        {
+          "text": "制定一个合理的学习计划，合理安排时间。",
+          "result": {
+            "san": 1,
+            "wealth": 0,
+            "energy": -1,
+            "intimate": 0,
+            "academic": 2
+          },
+          "the_next_id": ""
+        },
+        {
+          "text": "意识到我不必独自面对，决定积极寻求支持和帮助。",
+          "result": {
+            "san": 3,
+            "wealth": 0,
+            "energy": -1,
+            "intimate": 0,
+            "academic": 1
+          },
+          "the_next_id": ""
+        },
+        {
+          "text": "开摆！",
+          "result": {
+            "san": 0,
+            "wealth": 0,
+            "energy": 0,
+            "intimate": 0,
+            "academic": -99
+          },
+          "the_next_id": ""
+        }
+      ]
+    },
+    {
+      "id": "ri-15",
+      "description": "我和室友在卫生习惯和责任感方面存在分歧。我认为宿舍应该保持整洁和卫生，而小明对此似乎并不太关注。这导致了卫生状况的恶化和双方之间的不满情绪。",
+      "description_short": "室友之争",
+      "limit_time_range": "",
+      "the_previous_id": "",
+      "options": [
+        {
+          "text": "开诚布公的交流，最终相互妥协，制定规则",
+          "result": {
+            "san": 2,
+            "wealth": 0,
+            "energy": -1,
+            "intimate": 0,
+            "academic": 0
+          },
+          "the_next_id": ""
+        },
+        {
+          "text": "不服就是干",
+          "result": {
+            "san": -6,
+            "wealth": 0,
+            "energy": -3,
+            "intimate": 0,
+            "academic": 0
+          },
+          "the_next_id": ""
+        }
+      ]
+    },
+    {
+      "id": "ri-16",
+      "description": "学院为新入学的同学们举办迎新晚会，晚会节目丰富、现场气氛热烈",
+      "description_short": "新生晚会",
+      "limit_time_range": "f1-f2",
+      "the_previous_id": "",
+      "options": [
+        {
+          "text": "很高兴的去参加",
+          "result": {
+            "san": 2,
+            "wealth": 0,
+            "energy": 1,
+            "intimate": 1,
+            "academic": 0
+          },
+          "the_next_id": ""
+        },
+        {
+          "text": "不参加，留在实验室科研",
+          "result": {
+            "san": -1,
+            "wealth": 0,
+            "energy": -1,
+            "intimate": 0,
+            "academic": 1
+          },
+          "the_next_id": ""
+        }
+      ]
+    },
+    {
+      "id": "ri-17",
+      "description": "因课题组项目需要，安排我去出差",
+      "description_short": "出差",
+      "limit_time_range": "",
+      "the_previous_id": "",
+      "options": [
+        {
+          "text": "自己安排长度适中的出差时间",
+          "result": {
+            "san": -1,
+            "wealth": 0,
+            "energy": -1,
+            "intimate": 0,
+            "academic": 0
+          },
+          "the_next_id": ""
+        },
+        {
+          "text": "多安排几天时间，完成工作后出去放松心情",
+          "result": {
+            "san": 2,
+            "wealth": 0,
+            "energy": -2,
+            "intimate": 0,
+            "academic": 0
+          },
+          "the_next_id": ""
+        },
+        {
+          "text": "没得选，老师安排的行程非常紧张，一路舟车劳顿",
+          "result": {
+            "san": -2,
+            "wealth": 0,
+            "energy": -3,
+            "intimate": 0,
+            "academic": 0
+          },
+          "the_next_id": ""
+        }
+      ]
+    },
+    {
+      "id": "ri-18",
+      "description": "今晚欧冠决赛，时间在后半夜，明早有早八，老师会点名，此时我选择",
+      "description_short": "球赛后上早课",
+      "limit_time_range": "",
+      "the_previous_id": "",
+      "options": [
+        {
+          "text": "熬夜看球，去上课",
+          "result": {
+            "san": 2,
+            "wealth": 0,
+            "energy": -3,
+            "intimate": 0,
+            "academic": 1
+          },
+          "the_next_id": ""
+        },
+        {
+          "text": "熬夜看球，不去上课",
+          "result": {
+            "san": 2,
+            "wealth": 0,
+            "energy": -2,
+            "intimate": 0,
+            "academic": 0
+          },
+          "the_next_id": ""
+        },
+        {
+          "text": "不看球，去上课",
+          "result": {
+            "san": 0,
+            "wealth": 0,
+            "energy": 2,
+            "intimate": 0,
+            "academic": 1
+          },
+          "the_next_id": ""
+        }
+      ]
+    },
+    {
+      "id": "ri-19",
+      "description": "某一课程需要组队完成课程汇报，每组5-6人",
+      "description_short": "小组汇报作业",
+      "limit_time_range": "",
+      "the_previous_id": "",
+      "options": [
+        {
+          "text": "积极担任组长，完成分工和汇报",
+          "result": {
+            "san": -2,
+            "wealth": 0,
+            "energy": -3,
+            "intimate": 0,
+            "academic": 1
+          },
+          "the_next_id": ""
+        },
+        {
+          "text": "保质保量完成分配后的任务",
+          "result": {
+            "san": -1,
+            "wealth": 0,
+            "energy": -2,
+            "intimate": 0,
+            "academic": 0
+          },
+          "the_next_id": ""
+        },
+        {
+          "text": "摸鱼，让其他人完成作业",
+          "result": {
+            "san": 1,
+            "wealth": 0,
+            "energy": 0,
+            "intimate": 0,
+            "academic": 0
+          },
+          "the_next_id": ""
+        }
+      ]
+    },
+    {
+      "id": "ri-20",
+      "description": "由于项目阶段性的结束，同时科研和学业压力不大，我久违的获得了一个悠闲的周末",
+      "description_short": "周末安排",
+      "limit_time_range": "",
+      "the_previous_id": "",
+      "options": [
+        {
+          "text": "留在实验室继续科研",
+          "result": {
+            "san": -2,
+            "wealth": 0,
+            "energy": -3,
+            "intimate": 0,
+            "academic": 1
+          },
+          "the_next_id": ""
+        },
+        {
+          "text": "出去快乐玩耍",
+          "result": {
+            "san": 3,
+            "wealth": 0,
+            "energy": -2,
+            "intimate": 0,
+            "academic": 0
+          },
+          "the_next_id": ""
+        },
+        {
+          "text": "去找女友",
+          "result": {
+            "san": 2,
+            "wealth": -1,
+            "energy": -3,
+            "intimate": 3,
+            "academic": 0
+          },
+          "the_next_id": ""
+        }
+      ]
+    },
+    {
+      "id": "ri-21",
+      "description": "一早起来，课题组的群里弹出消息，通知今天下午开组会。",
+      "description_short": "开组会",
+      "limit_time_range": "",
+      "the_previous_id": "",
+      "options": [
+        {
+          "text": "摆了一周，什么进展都没有，赶紧爬起来准备",
+          "result": {
+            "san": -2,
+            "wealth": 0,
+            "energy": -3,
+            "intimate": 0,
+            "academic": -1
+          },
+          "the_next_id": ""
+        },
+        {
+          "text": "早已准备好，组会大展身手",
+          "result": {
+            "san": 2,
+            "wealth": 0,
+            "energy": -1,
+            "intimate": 0,
+            "academic": 2
+          },
+          "the_next_id": ""
+        }
+      ]
+    },
+    {
+      "id": "ri-22",
+      "description": "每个月发工资的时候又到了。",
+      "description_short": "发工资咯",
+      "limit_time_range": "",
+      "the_previous_id": "",
+      "options": [
+        {
+          "text": "只有国家补助，不够吃饭",
+          "result": {
+            "san": -2,
+            "wealth": 1,
+            "energy": 0,
+            "intimate": 0,
+            "academic": 0
+          },
+          "the_next_id": ""
+        },
+        {
+          "text": "加上课题组工资，这个月钱够了",
+          "result": {
+            "san": 2,
+            "wealth": 3,
+            "energy": 1,
+            "intimate": 0,
+            "academic": 0
+          },
+          "the_next_id": ""
+        }
+      ]
+    },
+    {
+      "id": "ri-23",
+      "description": "有个项目要出差交流，导师叫我和博后一起过去讨论一下。",
+      "description_short": "出差",
+      "limit_time_range": "",
+      "the_previous_id": "",
+      "options": [
+        {
+          "text": "这个城市好像还没去过，正好公费旅游一会。",
+          "result": {
+            "san": 2,
+            "wealth": 1,
+            "energy": -2,
+            "intimate": 0,
+            "academic": 0
+          },
+          "the_next_id": ""
+        },
+        {
+          "text": "研究所竟然在郊区，根本不想去，但还是答应了",
+          "result": {
+            "san": -2,
+            "wealth": 2,
+            "energy": -2,
+            "intimate": 0,
+            "academic": 0
+          },
+          "the_next_id": ""
+        }
+      ]
+    },
+    {
+      "id": "ri-24",
+      "description": "这周好像没有组会，导师也比较忙没空管，前几周忙了好久，好累，早上醒来眼睛都睁不开，在想还去实验室吗？",
+      "description_short": "去实验室吗",
+      "limit_time_range": "",
+      "the_previous_id": "",
+      "options": [
+        {
+          "text": "去！终于有时间做自己的东西了。",
+          "result": {
+            "san": 3,
+            "wealth": 0,
+            "energy": -2,
+            "intimate": 0,
+            "academic": 1
+          },
+          "the_next_id": ""
+        },
+        {
+          "text": "开摆！实验室是不可能去的",
+          "result": {
+            "san": 2,
+            "wealth": 0,
+            "energy": 2,
+            "intimate": 0,
+            "academic": 0
+          },
+          "the_next_id": ""
+        }
+      ]
+    },
+    {
+      "id": "ri-25",
+      "description": "到了每年评奖学金的时候后，不知道这次能拿到多少",
+      "description_short": "学业奖学金",
+      "limit_time_range": "",
+      "the_previous_id": "",
+      "options": [
+        {
+          "text": "我是一等（7500）吃顿好的",
+          "result": {
+            "san": 3,
+            "wealth": 3,
+            "energy": 3,
+            "intimate": 0,
+            "academic": 2
+          },
+          "the_next_id": ""
+        },
+        {
+          "text": "我是二等（5000），还好有钱",
+          "result": {
+            "san": 2,
+            "wealth": 2,
+            "energy": 2,
+            "intimate": 0,
+            "academic": 1
+          },
+          "the_next_id": ""
+        },
+        {
+          "text": "我是三等（0），怎么说也是荣誉",
+          "result": {
+            "san": -1,
+            "wealth": 0,
+            "energy": -1,
+            "intimate": 0,
+            "academic": 0
+          },
+          "the_next_id": ""
+        }
+      ]
+    },
+    {
+      "id": "rs-1(17)",
+      "description": "一天，我在食堂吃饭，一抬头，视线刚好对上了一双眼睛，我觉得心里扑通一下",
+      "description_short": "桃花运-初见",
+      "limit_time_range": "",
+      "the_previous_id": "",
+      "options": [
+        {
+          "text": "吃完饭后，我鼓起勇气，要到了微信",
+          "result": {
+            "san": 1,
+            "wealth": 0,
+            "energy": -1,
+            "intimate": 2,
+            "academic": 0
+          },
+          "the_next_id": "rs-1(27)"
+        },
+        {
+          "text": "从来没有谈过恋爱的我怂的不敢加微信",
+          "result": {
+            "san": -1,
+            "wealth": 0,
+            "energy": 0,
+            "intimate": 0,
+            "academic": 0
+          },
+          "the_next_id": "rs-1(57)"
+        }
+      ]
+    },
+    {
+      "id": "rs-1(27)",
+      "description": "我们已经认识了很久，今天是她他的生日，她他邀请我晚上一起共进晚餐",
+      "description_short": "桃花运-相识",
+      "limit_time_range": "",
+      "the_previous_id": "rs-1(17)",
+      "options": [
+        {
+          "text": "准备礼物，晚上吃饭的时候表白",
+          "result": {
+            "san": 1,
+            "wealth": -3,
+            "energy": -2,
+            "intimate": 2,
+            "academic": 0
+          },
+          "the_next_id": "rs-1(37)"
+        },
+        {
+          "text": "不去不去，我爱学习，我爱科研！",
+          "result": {
+            "san": 0,
+            "wealth": 0,
+            "energy": 0,
+            "intimate": -99,
+            "academic": 0
+          },
+          "the_next_id": "rs-1(57)"
+        }
+      ]
+    },
+    {
+      "id": "rs-1(37)",
+      "description": "我在她他生日的时候送上了自己精心准备的礼物，向她他诉说了自己的心意，询问她他愿不愿里当自己女男朋友",
+      "description_short": "桃花运-表白",
+      "limit_time_range": "",
+      "the_previous_id": "rs-1(27)",
+      "options": [
+        {
+          "text": "她他答应了我，表白成功！",
+          "result": {
+            "san": 3,
+            "wealth": 0,
+            "energy": 0,
+            "intimate": 99,
+            "academic": 0
+          },
+          "the_next_id": "rs-1(47)"
+        },
+        {
+          "text": "她他婉拒了我，说她他没有谈恋爱的打算",
+          "result": {
+            "san": -3,
+            "wealth": 0,
+            "energy": 0,
+            "intimate": -99,
+            "academic": 0
+          },
+          "the_next_id": "rs-1(57)"
+        },
+        {
+          "text": "她他说自己已经有男女朋友了",
+          "result": {
+            "san": -99,
+            "wealth": 0,
+            "energy": 0,
+            "intimate": -99,
+            "academic": 0
+          },
+          "the_next_id": "rs-1(57)"
+        }
+      ]
+    },
+    {
+      "id": "rs-1(47)",
+      "description": "某一天，我和我的女男朋友发生了争执，原因是我因为近期学业压力太大而忘记了七夕这个重要的日子，我的另一半非常生气",
+      "description_short": "桃花运-争执",
+      "limit_time_range": "",
+      "the_previous_id": "rs-1(37)",
+      "options": [
+        {
+          "text": "赶快道歉，并迅速补上礼物",
+          "result": {
+            "san": -2,
+            "wealth": -2,
+            "energy": -2,
+            "intimate": 99,
+            "academic": 0
+          },
+          "the_next_id": "rs-1(77)"
+        },
+        {
+          "text": "又不是什么重要日子，我还这么忙，吵架！",
+          "result": {
+            "san": -3,
+            "wealth": 0,
+            "energy": -3,
+            "intimate": -5,
+            "academic": 0
+          },
+          "the_next_id": "rs-1(67)"
+        }
+      ]
+    },
+    {
+      "id": "rs-1(57)",
+      "description": "我们终究错过彼此",
+      "description_short": "桃花运-错过",
+      "limit_time_range": "",
+      "the_previous_id": "rs-1(17),rs-1(27),rs-1(37)",
+      "options": [
+        {
+          "text": "内心毫无波澜，谈不谈恋爱无所谓",
+          "result": {
+            "san": 2,
+            "wealth": 0,
+            "energy": 0,
+            "intimate": -99,
+            "academic": 0
+          },
+          "the_next_id": ""
+        },
+        {
+          "text": "悲痛万分，萎靡不振",
+          "result": {
+            "san": -99,
+            "wealth": 0,
+            "energy": 0,
+            "intimate": -99,
+            "academic": 0
+          },
+          "the_next_id": ""
+        }
+      ]
+    },
+    {
+      "id": "rs-1(67)",
+      "description": "因为我们冲突不断，我的另一半最终向我提出了分手的要求",
+      "description_short": "桃花运-分开",
+      "limit_time_range": "",
+      "the_previous_id": "rs-1(47)",
+      "options": [
+        {
+          "text": "分就分，下一个更好！",
+          "result": {
+            "san": 2,
+            "wealth": 0,
+            "energy": 0,
+            "intimate": -99,
+            "academic": 0
+          },
+          "the_next_id": ""
+        },
+        {
+          "text": "不能没有她他，疯狂道歉",
+          "result": {
+            "san": -3,
+            "wealth": -2,
+            "energy": -3,
+            "intimate": 1,
+            "academic": 0
+          },
+          "the_next_id": "rs-1(77)"
+        }
+      ]
+    },
+    {
+      "id": "rs-1(77)",
+      "description": "我们再也没有任何人提出分手，感情稳定",
+      "description_short": "桃花运-终成眷属",
+      "limit_time_range": "",
+      "the_previous_id": "rs-1(47),rs-1(67)",
+      "options": [
+        {
+          "text": "开心快乐，幸幸福福",
+          "result": {
+            "san": 3,
+            "wealth": -5,
+            "energy": -2,
+            "intimate": 99,
+            "academic": 0
+          },
+          "the_next_id": ""
+        },
+        {
+          "text": "并不是特别开心，只是不愿意分开罢了",
+          "result": {
+            "san": -3,
+            "wealth": -2,
+            "energy": -2,
+            "intimate": 3,
+            "academic": 0
+          },
+          "the_next_id": ""
+        }
+      ]
+    },
+    {
+      "id": "rs-2(15)",
+      "description": "今天，导师叫我来办公室，要和我讨论一下我目前的学术情况，希望通过我现在着手进行的项目内容中的创新点提炼一篇文章投递出去。",
+      "description_short": "发论文-初见",
+      "limit_time_range": "",
+      "the_previous_id": "",
+      "options": [
+        {
+          "text": "感到兴奋，终于能投身学术了！",
+          "result": {
+            "san": 2,
+            "wealth": 0,
+            "energy": -2,
+            "intimate": 0,
+            "academic": 1
+          },
+          "the_next_id": "rs-2(25)"
+        },
+        {
+          "text": "十分崩溃，手头一堆ddl，哪有时间搞学术",
+          "result": {
+            "san": -2,
+            "wealth": 0,
+            "energy": -1,
+            "intimate": 0,
+            "academic": 0
+          },
+          "the_next_id": "rs-2(55)"
+        }
+      ]
+    },
+    {
+      "id": "rs-2(25)",
+      "description": "今天，我在做文献调研的时候感到十分迷茫，看到大佬们的文章文采奕奕，文章贡献和创新点突出，再对比我的文章平平无奇，我感到十分困惑和崩溃。",
+      "description_short": "发论文-迷茫",
+      "limit_time_range": "",
+      "the_previous_id": "rs-2(15)",
+      "options": [
+        {
+          "text": "沉下心来，继续挖掘内容，包装自己的文章",
+          "result": {
+            "san": -3,
+            "wealth": 0,
+            "energy": -3,
+            "intimate": 0,
+            "academic": 1
+          },
+          "the_next_id": "rs-2(35)"
+        },
+        {
+          "text": "想要放弃，安慰自己研究生毕业没有文章要求",
+          "result": {
+            "san": -1,
+            "wealth": 0,
+            "energy": 0,
+            "intimate": 0,
+            "academic": -1
+          },
+          "the_next_id": "rs-2(55)"
+        }
+      ]
+    },
+    {
+      "id": "rs-2(35)",
+      "description": "今天是我迭代修改文章的第六稿，考期将至，但我的文章修改之路还有很长一段路要走，我又萌生了放弃的念头，想着实在不行就发一个末流期刊算了。",
+      "description_short": "发论文-迭代",
+      "limit_time_range": "",
+      "the_previous_id": "rs-2(25)",
+      "options": [
+        {
+          "text": "坚定信念，通宵熬夜也要把文章肝完",
+          "result": {
+            "san": -3,
+            "wealth": 0,
+            "energy": -3,
+            "intimate": 0,
+            "academic": 1
+          },
+          "the_next_id": "rs-2(45)"
+        },
+        {
+          "text": "准备随便改改，到时间了随便投一个期刊摆烂",
+          "result": {
+            "san": -1,
+            "wealth": 0,
+            "energy": -1,
+            "intimate": 0,
+            "academic": -1
+          },
+          "the_next_id": "rs-2(55)"
+        }
+      ]
+    },
+    {
+      "id": "rs-2(45)",
+      "description": "今天我收到了论文收录通知，是一个Q2期刊",
+      "description_short": "发论文-成功",
+      "limit_time_range": "",
+      "the_previous_id": "rs-2(35)",
+      "options": [
+        {
+          "text": "万分兴奋，激发了我的学术动力",
+          "result": {
+            "san": 3,
+            "wealth": 0,
+            "energy": 0,
+            "intimate": 0,
+            "academic": 4
+          },
+          "the_next_id": ""
+        },
+        {
+          "text": "感到解脱，学术真难，学术动力下降",
+          "result": {
+            "san": -1,
+            "wealth": 0,
+            "energy": 0,
+            "intimate": 0,
+            "academic": 4
+          },
+          "the_next_id": ""
+        }
+      ]
+    },
+    {
+      "id": "rs-2(55)",
+      "description": "我的论文没有被SCI期刊收录",
+      "description_short": "发论文-失败",
+      "limit_time_range": "",
+      "the_previous_id": "rs-2(15),rs-2(25),rs-2(35)",
+      "options": [
+        {
+          "text": "无所谓，下次一定",
+          "result": {
+            "san": 1,
+            "wealth": 0,
+            "energy": 0,
+            "intimate": 0,
+            "academic": -1
+          },
+          "the_next_id": ""
+        },
+        {
+          "text": "有一丝失落，下次加油",
+          "result": {
+            "san": -1,
+            "wealth": 0,
+            "energy": 0,
+            "intimate": 0,
+            "academic": -1
+          },
+          "the_next_id": ""
+        }
+      ]
+    },
+    {
+      "id": "rs-3(13)",
+      "description": "一天，我在食堂吃饭，一抬头，视线刚好对上了一双眼睛，我觉得心里扑通一下",
+      "description_short": "桃花运-初见",
+      "limit_time_range": "",
+      "the_previous_id": "",
+      "options": [
+        {
+          "text": "吃完饭后，我鼓起勇气，要到了微信",
+          "result": {
+            "san": 1,
+            "wealth": 0,
+            "energy": -1,
+            "intimate": 2,
+            "academic": 0
+          },
+          "the_next_id": "rs-3(23)"
+        },
+        {
+          "text": "吃完饭后，我回到了宿舍",
+          "result": {
+            "san": -1,
+            "wealth": 0,
+            "energy": 0,
+            "intimate": 0,
+            "academic": 0
+          },
+          "the_next_id": ""
+        }
+      ]
+    },
+    {
+      "id": "rs-3(23)",
+      "description": "我在微信上与其天天聊天，在自己认为较为合适的时候约ta出来玩",
+      "description_short": "桃花运-相识",
+      "limit_time_range": "",
+      "the_previous_id": "rs-3(13)",
+      "options": [
+        {
+          "text": "ta答应了出来玩",
+          "result": {
+            "san": 2,
+            "wealth": -1,
+            "energy": -1,
+            "intimate": 2,
+            "academic": 0
+          },
+          "the_next_id": "rs-3(33)"
+        },
+        {
+          "text": "小丑竟是我自己",
+          "result": {
+            "san": -3,
+            "wealth": 0,
+            "energy": -1,
+            "intimate": -99,
+            "academic": 0
+          },
+          "the_next_id": ""
+        }
+      ]
+    },
+    {
+      "id": "rs-3(33)",
+      "description": "在上次完后，我们感情不断升温，我计划在合适的时间表白",
+      "description_short": "桃花运-过客？",
+      "limit_time_range": "",
+      "the_previous_id": "rs-3(23)",
+      "options": [
+        {
+          "text": "有情人终成眷属",
+          "result": {
+            "san": 3,
+            "wealth": -2,
+            "energy": -1,
+            "intimate": 5,
+            "academic": 0
+          },
+          "the_next_id": ""
+        },
+        {
+          "text": "小丑竟是我自己",
+          "result": {
+            "san": -5,
+            "wealth": 0,
+            "energy": -1,
+            "intimate": -99,
+            "academic": 0
+          },
+          "the_next_id": ""
+        }
+      ]
+    },
+    {
+      "id": "rs-4(13)",
+      "description": "一天，我在外面兼职，一起兼职的人向我推荐了一款很好卖的保健设备，并且想拉我入伙一起卖",
+      "description_short": "传销诈骗-相识",
+      "limit_time_range": "",
+      "the_previous_id": "",
+      "options": [
+        {
+          "text": "我答应了他一起卖",
+          "result": {
+            "san": 1,
+            "wealth": 1,
+            "energy": 0,
+            "intimate": 0,
+            "academic": 0
+          },
+          "the_next_id": "rs-4(23)"
+        },
+        {
+          "text": "我拒绝了他",
+          "result": {
+            "san": -1,
+            "wealth": 0,
+            "energy": 0,
+            "intimate": 0,
+            "academic": 0
+          },
+          "the_next_id": ""
+        }
+      ]
+    },
+    {
+      "id": "rs-4(23)",
+      "description": "他告诉我说如果拉人入伙可以赚的更多，而且自己的分成比例也会提高",
+      "description_short": "传销诈骗-深入",
+      "limit_time_range": "",
+      "the_previous_id": "rs-4(13)",
+      "options": [
+        {
+          "text": "我不仅自己卖还拉了人一起入伙",
+          "result": {
+            "san": 2,
+            "wealth": 3,
+            "energy": -2,
+            "intimate": 0,
+            "academic": 0
+          },
+          "the_next_id": "rs-4(33)"
+        },
+        {
+          "text": "我发现不对劲自己跑了出来",
+          "result": {
+            "san": -2,
+            "wealth": -2,
+            "energy": -2,
+            "intimate": 0,
+            "academic": 0
+          },
+          "the_next_id": ""
+        },
+        {
+          "text": "我仍然自己卖",
+          "result": {
+            "san": -2,
+            "wealth": 2,
+            "energy": -2,
+            "intimate": 0,
+            "academic": 0
+          },
+          "the_next_id": "rs-4(33)"
+        }
+      ]
+    },
+    {
+      "id": "rs-4(33)",
+      "description": "受害者向警察报案，我们被抓进了警察局，我被学校退学",
+      "description_short": "传销诈骗-结束",
+      "limit_time_range": "",
+      "the_previous_id": "rs-4(23)",
+      "options": [
+        {
+          "text": "我因为传销被拘留",
+          "result": {
+            "san": -99,
+            "wealth": -99,
+            "energy": -99,
+            "intimate": 0,
+            "academic": 0
+          },
+          "the_next_id": ""
+        }
+      ]
+    },
+    {
+      "id": "rs-5(14)",
+      "description": "在大学的图书馆里，我正在专注地阅读一本书，却不小心撞倒了旁边的书架。一个书本从上面滑落下来，正好砸中了旁边的ta。两人同时低头捡起书本，尴尬的气氛中，我们不约而同地笑了笑。",
+      "description_short": "意外邂逅",
+      "limit_time_range": "",
+      "the_previous_id": "",
+      "options": [
+        {
+          "text": "我立马上前道歉并交流",
+          "result": {
+            "san": 1,
+            "wealth": 0,
+            "energy": -1,
+            "intimate": 2,
+            "academic": 0
+          },
+          "the_next_id": "rs-5(24)"
+        },
+        {
+          "text": "我尽快拾起书本，然后默默离开了图书馆。",
+          "result": {
+            "san": 0,
+            "wealth": 0,
+            "energy": 0,
+            "intimate": -99,
+            "academic": 0
+          },
+          "the_next_id": ""
+        },
+        {
+          "text": "我调侃道：“看来这本书真的对我很有吸引力啊！”",
+          "result": {
+            "san": 1,
+            "wealth": 0,
+            "energy": -1,
+            "intimate": 2,
+            "academic": 0
+          },
+          "the_next_id": "rs-5(24)"
+        }
+      ]
+    },
+    {
+      "id": "rs-5(24)",
+      "description": "我立刻向ta道歉，并主动向ta询问是否受伤。我们互相交换了名字和联系方式，成为了好朋友,决定在图书馆共同学习",
+      "description_short": "共同学习",
+      "limit_time_range": "",
+      "the_previous_id": "rs-5(14)",
+      "options": [
+        {
+          "text": "我们在不同的学科领域各有优势。我们决定互相辅导",
+          "result": {
+            "san": 1,
+            "wealth": 0,
+            "energy": -1,
+            "intimate": 2,
+            "academic": 2
+          },
+          "the_next_id": "rs-5(34)"
+        },
+        {
+          "text": "我和ta共同参加学术讲座、研讨会和学术活动",
+          "result": {
+            "san": 1,
+            "wealth": 0,
+            "energy": -2,
+            "intimate": 2,
+            "academic": 3
+          },
+          "the_next_id": "rs-5(34)"
+        }
+      ]
+    },
+    {
+      "id": "rs-5(34)",
+      "description": "在我和ta的共同学习和相互支持中，我们逐渐意识到彼此的特殊感情。在一个美丽的夏日傍晚，我们走在校园的小径上，我鼓起勇气准备向ta表白。",
+      "description_short": "爱的告白",
+      "limit_time_range": "",
+      "the_previous_id": "rs-5(24)",
+      "options": [
+        {
+          "text": "我决定直接向ta表白，诚挚地表达出自己对她的深深喜欢",
+          "result": {
+            "san": 2,
+            "wealth": 0,
+            "energy": -2,
+            "intimate": 3,
+            "academic": 0
+          },
+          "the_next_id": "rs-5(44)"
+        },
+        {
+          "text": "我觉得此时不是合适的时机，我选择暂时保持我们之间的友谊",
+          "result": {
+            "san": 1,
+            "wealth": 0,
+            "energy": -1,
+            "intimate": 0,
+            "academic": 0
+          },
+          "the_next_id": "rs-5(44)"
+        }
+      ]
+    },
+    {
+      "id": "rs-5(44)",
+      "description": "爱情总不一定是一帆风顺的，在关键时刻也需要根据自身的状况与对方的态度做出决断的吧..",
+      "description_short": "爱的抉择",
+      "limit_time_range": "",
+      "the_previous_id": "rs-5(34)",
+      "options": [
+        {
+          "text": "我和ta决定坚守彼此的感情，选择在一起。",
+          "result": {
+            "san": 3,
+            "wealth": -1,
+            "energy": -3,
+            "intimate": 99,
+            "academic": 0
+          },
+          "the_next_id": ""
+        },
+        {
+          "text": "我和ta认识到虽然彼此有特殊的感情，但我们更看重彼此的友谊",
+          "result": {
+            "san": 1,
+            "wealth": 0,
+            "energy": -1,
+            "intimate": -99,
+            "academic": 0
+          },
+          "the_next_id": ""
+        },
+        {
+          "text": "我勇敢地表达了自己的感情，但ta并没有同样的回应。",
+          "result": {
+            "san": 2,
+            "wealth": -1,
+            "energy": -2,
+            "intimate": -99,
+            "academic": 0
+          },
+          "the_next_id": ""
+        }
+      ]
+    },
+    {
+      "id": "rs-6(13)",
+      "description": "在新学期开始之际，各个社团纷纷展开了招新活动。作为一名新生步入招新展区,我眼前展示着各式各样的社团，音乐社团在演奏美妙的乐曲，辩论社团正在激烈地辩论着，学业发展社团正在分享他们的学习活动经历。",
+      "description_short": "社团招新",
+      "limit_time_range": "",
+      "the_previous_id": "",
+      "options": [
+        {
+          "text": "加入音乐社团，发展音乐才能",
+          "result": {
+            "san": 1,
+            "wealth": -1,
+            "energy": -3,
+            "intimate": 0,
+            "academic": -2
+          },
+          "the_next_id": "rs-6(23)"
+        },
+        {
+          "text": "加入学业发展社团，提升自己学习能力",
+          "result": {
+            "san": 1,
+            "wealth": 0,
+            "energy": -2,
+            "intimate": 0,
+            "academic": 3
+          },
+          "the_next_id": "rs-6(23)"
+        },
+        {
+          "text": "不加，爬！",
+          "result": {
+            "san": 0,
+            "wealth": 0,
+            "energy": 0,
+            "intimate": 0,
+            "academic": 0
+          },
+          "the_next_id": ""
+        }
+      ]
+    },
+    {
+      "id": "rs-6(23)",
+      "description": "我加入了大学的社团策划小组，参与了社团活动的策划和执行过程。在策划会议中，我与其他成员一起坐在会议室里，桌上摆放着纸张、笔记本和彩色标记笔。",
+      "description_short": "社团活动策划",
+      "limit_time_range": "",
+      "the_previous_id": "rs-6(13)",
+      "options": [
+        {
+          "text": "加入策划小组，负责社团活动的策划和执行",
+          "result": {
+            "san": 2,
+            "wealth": 0,
+            "energy": -3,
+            "intimate": 0,
+            "academic": -1
+          },
+          "the_next_id": "rs-6(33)"
+        },
+        {
+          "text": "参与社团内的特定项目，展示自己的才能和兴趣",
+          "result": {
+            "san": 2,
+            "wealth": 0,
+            "energy": -3,
+            "intimate": 0,
+            "academic": -1
+          },
+          "the_next_id": "rs-6(33)"
+        },
+        {
+          "text": "啥也不干，混！",
+          "result": {
+            "san": -2,
+            "wealth": 0,
+            "energy": -3,
+            "intimate": 0,
+            "academic": 0
+          },
+          "the_next_id": ""
+        }
+      ]
+    },
+    {
+      "id": "rs-6(33)",
+      "description": "社团成果展示的日子终于到来，我所在的社团精心准备了一场精彩的展示活动，展示自己的成果，我打算：",
+      "description_short": "社团成果展示",
+      "limit_time_range": "",
+      "the_previous_id": "rs-6(23)",
+      "options": [
+        {
+          "text": "参加校内外比赛或演出，展示社团的成果和才华",
+          "result": {
+            "san": 3,
+            "wealth": 0,
+            "energy": -3,
+            "intimate": 0,
+            "academic": -1
+          },
+          "the_next_id": ""
+        },
+        {
+          "text": "与其他社团合作举办活动，拓展社团影响力",
+          "result": {
+            "san": 3,
+            "wealth": 0,
+            "energy": -3,
+            "intimate": 0,
+            "academic": -1
+          },
+          "the_next_id": ""
+        },
+        {
+          "text": "没有成果，混！",
+          "result": {
+            "san": -2,
+            "wealth": 0,
+            "energy": -3,
+            "intimate": 0,
+            "academic": 0
+          },
+          "the_next_id": ""
+        }
+      ]
+    },
+    {
+      "id": "rs-7(13)",
+      "description": "某作业的时间节点为6.12日，在这之前，我有一周多的时间准备该作业，我选择",
+      "description_short": "繁忙的生活",
+      "limit_time_range": "",
+      "the_previous_id": "",
+      "options": [
+        {
+          "text": "尽早完成作业，不拖延",
+          "result": {
+            "san": 1,
+            "wealth": 0,
+            "energy": -2,
+            "intimate": 0,
+            "academic": 1
+          },
+          "the_next_id": "rs-7(23)"
+        },
+        {
+          "text": "我是一个拖延症患者，拖到下周二才开始准备该作业",
+          "result": {
+            "san": -1,
+            "wealth": 0,
+            "energy": -3,
+            "intimate": 0,
+            "academic": 0
+          },
+          "the_next_id": "rs-7(23)"
+        }
+      ]
+    },
+    {
+      "id": "rs-7(23)",
+      "description": "课题组突然在6.9日有一个工作安排，要求在6.12日前完成一份报告的撰写",
+      "description_short": "繁忙的生活",
+      "limit_time_range": "",
+      "the_previous_id": "",
+      "options": [
+        {
+          "text": "由于作业已经完成，我有充足的时间完成项目报告",
+          "result": {
+            "san": 1,
+            "wealth": 0,
+            "energy": -1,
+            "intimate": 0,
+            "academic": 1
+          },
+          "the_next_id": "rs-7(33)"
+        },
+        {
+          "text": "由于作业没有及时完成，导致6.12日前两天工作连爆满，不得不熬夜加班",
+          "result": {
+            "san": -4,
+            "wealth": 0,
+            "energy": -4,
+            "intimate": 0,
+            "academic": 0
+          },
+          "the_next_id": "rs-7(33)"
+        }
+      ]
+    },
+    {
+      "id": "rs-7(33)",
+      "description": "女友恰好在6.12号前后来到北京旅游，需要我陪她游玩，尽管我已经把工作安排的很合理，但是由于突然安排的任务，导致陪女友的时间不多，女友生气",
+      "description_short": "繁忙的生活",
+      "limit_time_range": "",
+      "the_previous_id": "rs-7(23)",
+      "options": [
+        {
+          "text": "我花了很长时间，买礼物给女友，才把女友哄好",
+          "result": {
+            "san": -3,
+            "wealth": -2,
+            "energy": -2,
+            "intimate": -1,
+            "academic": 0
+          },
+          "the_next_id": ""
+        },
+        {
+          "text": "前期繁忙的工作导致我火气很大，女友生气后没有控制好情绪，两人大吵一架后分手",
+          "result": {
+            "san": -3,
+            "wealth": 0,
+            "energy": -2,
+            "intimate": -99,
+            "academic": 0
+          },
+          "the_next_id": ""
+        }
+      ]
+    },
+    {
+      "id": "rs-8(14)",
+      "description": "在两年半的研究生生活中，对于未来的职业选择和规划，我有很多选择，",
+      "description_short": "职业规划",
+      "limit_time_range": "",
+      "the_previous_id": "",
+      "options": [
+        {
+          "text": "科研达人：热爱科研，积极于热爱的科研事业",
+          "result": {
+            "san": -3,
+            "wealth": 0,
+            "energy": -3,
+            "intimate": 0,
+            "academic": 1
+          },
+          "the_next_id": "rs-8(24)"
+        },
+        {
+          "text": "实习达人：面向就业，毕业后选择进入国防领域，建设祖国",
+          "result": {
+            "san": -1,
+            "wealth": 0,
+            "energy": -2,
+            "intimate": 0,
+            "academic": 0
+          },
+          "the_next_id": "rs-8(34)"
+        },
+        {
+          "text": "没有规划，走一步看一步",
+          "result": {
+            "san": 2,
+            "wealth": 0,
+            "energy": 1,
+            "intimate": 0,
+            "academic": 0
+          },
+          "the_next_id": "rs-8(44)"
+        }
+      ]
+    },
+    {
+      "id": "rs-8(24)",
+      "description": "作为科研达人，我在科研道路也面临诸多选择，比如",
+      "description_short": "职业规划",
+      "limit_time_range": "",
+      "the_previous_id": "rs-8(14)",
+      "options": [
+        {
+          "text": "硕转博，顺利毕业后留在学院读博后",
+          "result": {
+            "san": -3,
+            "wealth": 0,
+            "energy": -3,
+            "intimate": 0,
+            "academic": 3
+          },
+          "the_next_id": ""
+        },
+        {
+          "text": "在学院读完硕士后，选择出国读博和博士后，博后出站后回国",
+          "result": {
+            "san": -4,
+            "wealth": 0,
+            "energy": -5,
+            "intimate": 0,
+            "academic": 4
+          },
+          "the_next_id": ""
+        }
+      ]
+    },
+    {
+      "id": "rs-8(34)",
+      "description": "作为实习达人，我在两年半的生活中面临诸多选择，比如",
+      "description_short": "职业规划",
+      "limit_time_range": "",
+      "the_previous_id": "rs-8(14)",
+      "options": [
+        {
+          "text": "积极去校外的企业实习，毕业后打算去民企工作",
+          "result": {
+            "san": -2,
+            "wealth": 3,
+            "energy": -3,
+            "intimate": 0,
+            "academic": 0
+          },
+          "the_next_id": ""
+        },
+        {
+          "text": "积极承担课题组内的课题和项目的工作，对接国防系统内各企业和研究所的课题，毕业后到系统内单位工作",
+          "result": {
+            "san": -2,
+            "wealth": 1,
+            "energy": -2,
+            "intimate": 0,
+            "academic": 0
+          },
+          "the_next_id": ""
+        }
+      ]
+    },
+    {
+      "id": "rs-8(44)",
+      "description": "走一步看一步的我，不需要提前规划研究生生活，按部就班过完研究生生活，顺利毕业后",
+      "description_short": "职业规划",
+      "limit_time_range": "",
+      "the_previous_id": "rs-8(14)",
+      "options": [
+        {
+          "text": "找一份离家近薪资一般但生活惬意的工作",
+          "result": {
+            "san": -1,
+            "wealth": 1,
+            "energy": -1,
+            "intimate": 0,
+            "academic": 0
+          },
+          "the_next_id": ""
+        },
+        {
+          "text": "回家继承家业，从此走上人生巅峰",
+          "result": {
+            "san": 3,
+            "wealth": 99,
+            "energy": 1,
+            "intimate": 0,
+            "academic": 0
+          },
+          "the_next_id": ""
+        }
+      ]
+    },
+    {
+      "id": "rs-9(17)",
+      "description": "几次组会下来，导师让我把最近的成果整理整理，发篇文章，问我想发哪",
+      "description_short": "paper-选刊",
+      "limit_time_range": "",
+      "the_previous_id": "",
+      "options": [
+        {
+          "text": "一区顶刊，要发就发最牛的",
+          "result": {
+            "san": 3,
+            "wealth": 0,
+            "energy": -2,
+            "intimate": 0,
+            "academic": 2
+          },
+          "the_next_id": "rs-9(27)"
+        },
+        {
+          "text": "北航学报，先发一篇中文的吧，都是论文没区别",
+          "result": {
+            "san": 2,
+            "wealth": 0,
+            "energy": -1,
+            "intimate": 0,
+            "academic": 1
+          },
+          "the_next_id": "rs-9(37)"
+        }
+      ]
+    },
+    {
+      "id": "rs-9(27)",
+      "description": "忙活了一两个月，终于改完了论文，把论文投了出去，等待审稿意见",
+      "description_short": "paper-投稿顶刊",
+      "limit_time_range": "",
+      "the_previous_id": "",
+      "options": [
+        {
+          "text": "一次就中，给了点小意见，修改修改就好了",
+          "result": {
+            "san": 3,
+            "wealth": 0,
+            "energy": 2,
+            "intimate": 0,
+            "academic": 3
+          },
+          "the_next_id": "rs-9(47)"
+        },
+        {
+          "text": "被拒稿了，好多条修改意见，修改修改换个期刊吧",
+          "result": {
+            "san": -1,
+            "wealth": 0,
+            "energy": -2,
+            "intimate": 0,
+            "academic": 1
+          },
+          "the_next_id": "rs-9(57)"
+        }
+      ]
+    },
+    {
+      "id": "rs-9(37)",
+      "description": "忙活了一两个月，终于改完了论文，把论文投了出去，等待审稿意见",
+      "description_short": "paper-投稿北航学报",
+      "limit_time_range": "",
+      "the_previous_id": "",
+      "options": [
+        {
+          "text": "一次就中，给了点小意见，修改修改就好了",
+          "result": {
+            "san": 2,
+            "wealth": 0,
+            "energy": 2,
+            "intimate": 0,
+            "academic": 2
+          },
+          "the_next_id": "rs-9(67)"
+        },
+        {
+          "text": "被拒稿了，好多条修改意见，不想发了，改成专利吧",
+          "result": {
+            "san": -2,
+            "wealth": 0,
+            "energy": -1,
+            "intimate": 0,
+            "academic": 1
+          },
+          "the_next_id": "rs-9(77)"
+        }
+      ]
+    },
+    {
+      "id": "rs-9(47)",
+      "description": "历经千辛万苦，论文终于发表出来了，感谢国家，感谢家人，感谢老板，感谢自己",
+      "description_short": "paper-发表顶刊",
+      "limit_time_range": "",
+      "the_previous_id": "",
+      "options": [
+        {
+          "text": "我真牛！",
+          "result": {
+            "san": 4,
+            "wealth": 3,
+            "energy": 2,
+            "intimate": 0,
+            "academic": 5
+          },
+          "the_next_id": ""
+        },
+        {
+          "text": "继续努力，准备下一篇！",
+          "result": {
+            "san": 4,
+            "wealth": 3,
+            "energy": 2,
+            "intimate": 0,
+            "academic": 6
+          },
+          "the_next_id": ""
+        }
+      ]
+    },
+    {
+      "id": "rs-9(57)",
+      "description": "历经千辛万苦，论文终于发表出来了，感谢国家，感谢家人，感谢老板，感谢自己",
+      "description_short": "paper-发表SCI",
+      "limit_time_range": "",
+      "the_previous_id": "",
+      "options": [
+        {
+          "text": "我真牛！",
+          "result": {
+            "san": 3,
+            "wealth": 2,
+            "energy": 2,
+            "intimate": 0,
+            "academic": 3
+          },
+          "the_next_id": ""
+        },
+        {
+          "text": "继续努力，下次发顶刊！",
+          "result": {
+            "san": 3,
+            "wealth": 2,
+            "energy": 3,
+            "intimate": 0,
+            "academic": 4
+          },
+          "the_next_id": ""
+        }
+      ]
+    },
+    {
+      "id": "rs-9(67)",
+      "description": "历经千辛万苦，论文终于发表出来了，感谢国家，感谢家人，感谢老板，感谢自己",
+      "description_short": "paper-发表北航学报",
+      "limit_time_range": "",
+      "the_previous_id": "",
+      "options": [
+        {
+          "text": "我真牛！",
+          "result": {
+            "san": 2,
+            "wealth": 1,
+            "energy": 1,
+            "intimate": 0,
+            "academic": 2
+          },
+          "the_next_id": ""
+        },
+        {
+          "text": "有文章了，能毕业咯~",
+          "result": {
+            "san": 3,
+            "wealth": 1,
+            "energy": 3,
+            "intimate": 0,
+            "academic": 2
+          },
+          "the_next_id": ""
+        }
+      ]
+    },
+    {
+      "id": "rs-9(77)",
+      "description": "历经千辛万苦，专利终于发表出来了，感谢国家，感谢家人，感谢老板，感谢自己",
+      "description_short": "paper-发表专利",
+      "limit_time_range": "",
+      "the_previous_id": "",
+      "options": [
+        {
+          "text": "发个专利也很厉害了~",
+          "result": {
+            "san": 1,
+            "wealth": 0,
+            "energy": 0,
+            "intimate": 0,
+            "academic": 1
+          },
+          "the_next_id": ""
+        },
+        {
+          "text": "我真牛！",
+          "result": {
+            "san": 1,
+            "wealth": 0,
+            "energy": 2,
+            "intimate": 0,
+            "academic": 1
+          },
+          "the_next_id": ""
+        }
+      ]
+    }
+  ]
+}
+
