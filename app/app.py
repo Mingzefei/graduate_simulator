@@ -38,6 +38,11 @@ class Game:
             events_data = json.load(f)
             events_lib = events_data['events']
         self.events_lib = events_lib
+        # 结局库
+        with open('../data/processed/endings.json', 'r', encoding='utf-8') as f:
+            endings_data = json.load(f)
+            endings_lib = endings_data['endings']
+        self.endings_lib = endings_lib
 
 
     def record_history(self):
@@ -113,8 +118,30 @@ class Game:
 
     def get_endings(self):
         # 根据数值面板获取结局
-        # TODO
-        return ['e-1','e-2']
+        the_endings = []
+
+        count_low_san = len([x for x in self.history['san'] if x < 1])
+        if count_low_san > len(self.history['san']) / 2:
+            the_endings.append('e-2')
+
+        count_health = len([x for x in self.history['energy'] if x > 5])
+        if count_health > len(self.history['energy']) / 2:
+            the_endings.append('e-3')
+
+        count_wealth = len([x for x in self.history['wealth'] if x > 8])
+        if count_wealth > len(self.history['wealth']) / 2:
+            the_endings.append('e-4')
+
+        if self.history['intimate'][-1] > 8:
+            the_endings.append('e-5')
+
+        if self.history['academic'][-1] > 8:
+            the_endings.append('e-6')
+
+        if len(the_endings) <= 1:
+            the_endings.append('e-1')
+
+        return the_endings
 
     def update_game(self, option):
         # 玩家做出选项
