@@ -180,20 +180,28 @@ def play():
 
     if request.method == "POST":
         option = request.form.get("option")
+        print(type(option))
+        print(option)
         game.update_game(option)
 
     # 传递游戏状态，并转为 json 格式
+    event = game.get_event()
+    options = event['options']
     state = {
         "san": game.san,
         "wealth": game.wealth,
         "energy": game.energy,
         "intimate": game.intimate,
         "academic": game.academic,
-        "event": game.get_event(),
+        "event_description": event['description'],
+        "option": options,
+        "option_1": options[0]['text'],
+        "option_2": options[1]['text'],
+        "option_3": options[2]['text'],
         "history": game.history,
         "endings": game.endings,
     }
-    state = json.dumps(state)
+    state = json.dumps(state,ensure_ascii=False)
 
     # 判定是否触发结局
     if game.endings:
