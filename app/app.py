@@ -7,6 +7,7 @@ import base64
 from matplotlib.backends.backend_agg import FigureCanvasAgg as FigureCanvas
 import matplotlib.pyplot as plt
 from markupsafe import Markup
+import csv
 import scienceplots
 plt.style.use(['science', 'no-latex'])
 
@@ -186,6 +187,10 @@ class Game:
         # Convert image to base64 encoded string
         image_data = base64.b64encode(output.getvalue()).decode('utf-8')
         return image_data
+    
+    def reset(self):
+        self.__init__()
+        
 
 
 game = Game()
@@ -233,19 +238,34 @@ def play():
 
     # 判定是否触发结局
     if game.endings:
-        # endings
-        endings = {}
-        for ending in game.endings:
-            # 从 game.endings_lib 中获取结局内容
-            for e in game.endings_lib:
-                if e['id'] == ending:
-                    endings[e['description_short']] = e['description']
-        endings = jsonify(endings).json
-        print(game.history)
-        return render_template("end.html", endings=endings, image_data=Markup(game.plot_history()))
+        return redirect(url_for("end"))
     else:
         return render_template("play.html", state=state)
+  
+@app.route("/end",methods=["GET", "POST"])
+def end():
+
+    # 重置游戏
+    global seed
+    if request.method == "POST":
+        seed = None
+        game.reset()
+        return redirect(url_for("index"))
+    
+    endings = {}
+    for ending in game.endings:
+        # 从 game.endings_lib 中获取结局内容
+        for e in game.endings_lib:
+            if e['id'] == ending:
+                endings[e['description_short']] = e['description']
+    endings = jsonify(endings).json
+    print(game.history)
+    with open('../results/app.csv', 'a', newline='') as f:
+        writer = csv.writer(f)
+        writer.writerow([seed, game.history])
+    return render_template("end.html", endings=endings, image_data=Markup(game.plot_history()))
 
 
 if __name__ == '__main__':
-    app.run(host='10.0.24.9', port=5000)
+    # app.run(host='10.0.24.9', port=5000)
+    app.run(debug=True)
