@@ -241,10 +241,11 @@ def play():
                 if e['id'] == ending:
                     endings[e['description_short']] = e['description']
         endings = jsonify(endings).json
+        print(game.history)
         return render_template("end.html", endings=endings, image_data=Markup(game.plot_history()))
     else:
         return render_template("play.html", state=state)
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='10.0.24.9', port=5000)
