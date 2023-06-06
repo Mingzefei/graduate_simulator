@@ -2,15 +2,18 @@ from flask import Flask, render_template, request, jsonify, redirect, url_for
 import json
 import random
 import time
+from io import BytesIO
+import base64
+from matplotlib.backends.backend_agg import FigureCanvasAgg as FigureCanvas
+import matplotlib.pyplot as plt
+from  markupsafe import Markup
+
 
 app = Flask(__name__)
 
 
 class Game:
-    def __init__(self, seed):
-        # 随机种子
-        self.seed = seed
-        random.seed(self.seed)
+    def __init__(self):
         # 事件
         self.round = 1
         self.event_id = 'f-1'
@@ -24,7 +27,7 @@ class Game:
         self.academic = 0 # 学术值
         # 历史数据
         self.history = {
-                'event_id' : [self.event_id],
+                'event_id' : [],
                 'san' : [self.san],
                 'wealth' : [self.wealth],
                 'energy' : [self.energy],
@@ -44,6 +47,10 @@ class Game:
             endings_lib = endings_data['endings']
         self.endings_lib = endings_lib
 
+    def set_random_seed(self, seed):
+        # 设置随机种子
+        self.seed = seed
+        random.seed(self.seed)
 
     def record_history(self):
         # 记录历史数据
@@ -76,9 +83,9 @@ class Game:
     def get_random_event_id(self):
         has_found_event = False
         while not has_found_event:
-            next_event_id = random.choice(list(self.events_lib.keys()))
+            next_event = random.choice(self.events_lib)
             # limit_time_range 判定
-            limit_time_range = self.events_lib[next_event_id]['limit_time_range']
+            limit_time_range = next_event['limit_time_range']
             if limit_time_range:
                 left_limit = limit_time_range.split('-')[0]
                 right_limit = limit_time_range.split('-')[1]
@@ -86,6 +93,7 @@ class Game:
                     has_found_event = True
             else:
                 has_found_event = True
+        return next_event['id']
 
     def get_next_event(self, option):
         # 下一个事件，优先判定是否触发固定事件，其次随机关联事件，最后随机独立事件
@@ -95,6 +103,7 @@ class Game:
             next_event_id = 'f-3' # 固定事件-研究生第一个暑假
         elif self.round + 1 == 10:
             next_event_id = 'f-4' # 固定事件-开题
+        # elif self.round + 1 == 4:
         elif self.round + 1 == 15:
             next_event_id = 'f-5' # 固定事件-毕业
         elif self.next_stochastic_event: # 存在未使用的关联事件
@@ -158,6 +167,7 @@ class Game:
             self.round += 1
             self.energy += 3 # 增加体力
 
+game = Game()
 seed = None
 
 @app.route("/", methods=["GET", "POST"])
@@ -167,26 +177,39 @@ def index():
         seed = request.form.get("seed")
         if not seed:
             seed = str(time.time())
+        game.set_random_seed(seed)
         return redirect(url_for("play"))
     return render_template("index.html")
 
 @app.route("/play", methods=["GET", "POST"])
 def play():
 
-    global seed
-    if not seed:
+
+    if seed is None:
         return redirect(url_for("index"))
-    game = Game(seed)
 
     if request.method == "POST":
         option = request.form.get("option")
-        print(type(option))
-        print(option)
+        option = eval(option)
         game.update_game(option)
+        print(game.history)
 
     # 传递游戏状态，并转为 json 格式
     event = game.get_event()
     options = event['options']
+    # options 为包含2或3个的 option 的列表
+    # 每个 option 为1个字典，有如下内容
+    #         {
+    #       "text": "学业拼搏\n我决定把学业放在首位",
+    #       "result": {
+    #         "san": 1,
+    #         "wealth": 2,
+    #         "energy": -2,
+    #         "intimate": 0,
+    #         "academic": 3
+    #       },
+    #       "the_next_id": ""
+    #     },
     state = {
         "san": game.san,
         "wealth": game.wealth,
@@ -194,18 +217,39 @@ def play():
         "intimate": game.intimate,
         "academic": game.academic,
         "event_description": event['description'],
-        "option": options,
-        "option_1": options[0]['text'],
-        "option_2": options[1]['text'],
-        "option_3": options[2]['text'],
+        "options": options,
         "history": game.history,
         "endings": game.endings,
     }
-    state = json.dumps(state,ensure_ascii=False)
+    state = jsonify(state).json
 
     # 判定是否触发结局
     if game.endings:
-        return render_template("end.html", state=state)
+        # endings
+        endings = {}
+        for ending in game.endings:
+            # 从 game.endings_lib 中获取结局内容
+            for e in game.endings_lib:
+                if e['id'] == ending:
+                    endings[e['description_short']] = e['description']
+        endings = jsonify(endings).json
+        # plot
+        fig = plt.figure()
+        plt.plot(state['history']['san'], label='san')
+        plt.plot(state['history']['wealth'], label='wealth')
+        plt.plot(state['history']['energy'], label='energy')
+        plt.plot(state['history']['intimate'], label='intimate')
+        plt.plot(state['history']['academic'], label='academic')
+        plt.legend()
+        # Render fig as an image in memory
+        output = BytesIO()
+        FigureCanvas(fig).print_png(output)
+
+        # Convert image to base64 encoded string
+        image_data = base64.b64encode(output.getvalue()).decode('utf-8')
+
+        # Pass image data to the HTML template
+        return render_template("end.html", endings=endings, image_data=Markup(image_data))
     else:
         return render_template("play.html", state=state)
 

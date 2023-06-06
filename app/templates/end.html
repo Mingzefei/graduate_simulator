@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>研究生生活</title>
+    <!-- 引入 Bootstrap 样式 -->
+    <link rel="stylesheet" href="https://cdn.bootcdn.com/ajax/libs/twitter-bootstrap/5.0.2/css/bootstrap.min.css">
+  </head>
+  <body>
+    <div class="container mt-5">
+      <h1 class="text-center mb-4">研究生生活</h1>
+      <div class="row">
+        <div class="col-md-4">
+          <h2>状态面板</h2>
+            <img src="data:image/png;base64, {{ image_data}}" alt="趋势图">
+        </div>
+        <div class="col-md-8">
+          <h2>达成成就</h2>
+          {% for key, value in endings.items() %}
+            <p><strong>{{ key }}</strong>: {{ value }}</p>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
