@@ -5,6 +5,8 @@
     <title>研究生生活</title>
     <!-- 引入 Bootstrap 样式 -->
     <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.0.2/css/bootstrap.min.css">
+    <!-- 支持响应式布局 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
     <div class="container mt-5">
@@ -16,30 +18,30 @@
             <tbody>
               <tr>
                 <td>精神值</td>
-                <td>{{ state.san }}</td>
+                <td id="san">{{ state.san }}</td>
               </tr>
               <tr>
                 <td>财富值</td>
-                <td>{{ state.wealth }}</td>
+                <td id="wealth">{{ state.wealth }}</td>
               </tr>
               <tr>
                 <td>精力值</td>
-                <td>{{ state.energy }}</td>
+                <td id="energy">{{ state.energy }}</td>
               </tr>
               <tr>
                 <td>亲密值</td>
-                <td>{{ state.intimate }}</td>
+                <td id="intimate">{{ state.intimate }}</td>
               </tr>
               <tr>
                 <td>学术值</td>
-                <td>{{ state.academic }}</td>
+                <td id="academic">{{ state.academic }}</td>
               </tr>
             </tbody>
           </table>
         </div>
         <div class="col-md-8">
           <h2>情景描述</h2>
-          <p>{{ state.event_description }}</p>
+          <p id="event-description">{{ state.event_description }}</p>
           <form id="option-form">
             {% for option in state.options %}
               <div class="form-check">
@@ -54,6 +56,8 @@
         </div>
       </div>
     </div>
+    <!-- 引入 Bootstrap JavaScript -->
+    <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.0.2/js/bootstrap.min.js"></script>
     <!-- 引入 jQuery 库 -->
     <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
@@ -65,7 +69,7 @@
             url: '{{ url_for("play") }}',
             method: 'POST',
             data: $(this).serialize(),
-            dataType: 'text', 
+            dataType: 'text',
             success: function(data) {
               // 更新状态面板和情景描述
               $('#san').text(data.san);
