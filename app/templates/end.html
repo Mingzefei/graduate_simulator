@@ -20,11 +20,12 @@
             <p><strong>{{ key }}</strong>: {{ value }}</p>
           {% endfor %}
         </div>
-      </div>
-    </div>
     <form method="POST" action="{{ url_for('end') }}">
-      <div class="text-center mt-3">
+      <div class="text-center">
         <button type="submit" class="btn btn-primary">重新开始</button>
       </div>
+    </form>
+      </div>
+    </div>
   </body>
 </html>

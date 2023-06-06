@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, jsonify, redirect, url_for
+from flask import Flask, render_template, request, jsonify, redirect, url_for, session
 import json
 import random
 import time
@@ -8,12 +8,16 @@ from matplotlib.backends.backend_agg import FigureCanvasAgg as FigureCanvas
 import matplotlib.pyplot as plt
 from markupsafe import Markup
 import csv
+from datetime import timedelta
+import os
 import scienceplots
 plt.style.use(['science', 'no-latex'])
 
 
 app = Flask(__name__)
-
+app.secret_key='kdjklfjkd87384hjdhjh'
+app.config['SECRET_KEY'] = os.urandom(24)
+app.config['PERMANENT_SESSION_LIFETIME'] = timedelta(days=7)
 
 class Game:
     def __init__(self):
@@ -191,11 +195,18 @@ class Game:
     def reset(self):
         self.__init__()
         
+def obj2dict(obj):    
+    pr = {}
+    for name in dir(obj):
+        value = getattr(obj, name)
+        if not name.startswith('__') and not callable(value):
+            pr[name] = value
+    # 删除其中的 events_lib 和 endings_lib
+    del pr['events_lib']
+    del pr['endings_lib']
+    return pr
 
-
-game = Game()
 seed = None
-
 
 @app.route("/", methods=["GET", "POST"])
 def index():
@@ -204,7 +215,9 @@ def index():
         seed = request.form.get("seed")
         if not seed:
             seed = str(time.time())
+        game = Game()
         game.set_random_seed(seed)
+        session['game'] = obj2dict(game)
         return redirect(url_for("play"))
     return render_template("index.html")
 
@@ -212,14 +225,21 @@ def index():
 @app.route("/play", methods=["GET", "POST"])
 def play():
 
+    if "game" not in session:
+        return redirect(url_for("index"))
+
     if seed is None:
         return redirect(url_for("index"))
 
+    game_dict = session['game']
+    game = Game()
+    game.__dict__.update(game_dict)
     if request.method == "POST":
         option = request.form.get("option")
         option = eval(option)
         game.update_game(option)
 
+    session['game'] = obj2dict(game)
     # 传递游戏状态，并转为 json 格式
     event = game.get_event()
     options = event['options']
@@ -244,12 +264,20 @@ def play():
   
 @app.route("/end",methods=["GET", "POST"])
 def end():
+    
+    if "game" not in session:
+        return redirect(url_for("index"))
 
     # 重置游戏
     global seed
+    game_dict = session['game']
+    game = Game()
+    game.__dict__.update(game_dict)
+    
     if request.method == "POST":
         seed = None
-        game.reset()
+        # game.reset()
+        session.pop('game')
         return redirect(url_for("index"))
     
     endings = {}
