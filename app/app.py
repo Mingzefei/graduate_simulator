@@ -6,9 +6,9 @@ from io import BytesIO
 import base64
 from matplotlib.backends.backend_agg import FigureCanvasAgg as FigureCanvas
 import matplotlib.pyplot as plt
-from  markupsafe import Markup
+from markupsafe import Markup
 import scienceplots
-plt.style.use(['science','no-latex'])
+plt.style.use(['science', 'no-latex'])
 
 
 app = Flask(__name__)
@@ -20,22 +20,22 @@ class Game:
         self.round = 1
         self.event_id = 'f-1'
         self.is_in_stochastic_event = False
-        self.next_stochastic_event = '' # 取用后清空
+        self.next_stochastic_event = ''  # 取用后清空
         # 数值面板
-        self.san = 8 # 精神值
-        self.wealth = 2 # 财富值
-        self.energy = 8 # 精力值
-        self.intimate = 0 # 亲密值
-        self.academic = 0 # 学术值
+        self.san = 8  # 精神值
+        self.wealth = 2  # 财富值
+        self.energy = 8  # 精力值
+        self.intimate = 0  # 亲密值
+        self.academic = 0  # 学术值
         # 历史数据
         self.history = {
-                'event_id' : [],
-                'san' : [self.san],
-                'wealth' : [self.wealth],
-                'energy' : [self.energy],
-                'intimate' : [self.intimate],
-                'academic' : [self.academic]
-                }
+            'event_id': [],
+            'san': [self.san],
+            'wealth': [self.wealth],
+            'energy': [self.energy],
+            'intimate': [self.intimate],
+            'academic': [self.academic]
+        }
         # 结局（多个）
         self.endings = []
         # 事件库
@@ -102,16 +102,16 @@ class Game:
     def get_next_event(self, option):
         # 下一个事件，优先判定是否触发固定事件，其次随机关联事件，最后随机独立事件
         if self.round + 1 == 5:
-            next_event_id = 'f-2' # 固定事件-确定方向
+            next_event_id = 'f-2'  # 固定事件-确定方向
         elif self.round + 1 == 7:
-            next_event_id = 'f-3' # 固定事件-研究生第一个暑假
+            next_event_id = 'f-3'  # 固定事件-研究生第一个暑假
         elif self.round + 1 == 10:
-            next_event_id = 'f-4' # 固定事件-开题
+            next_event_id = 'f-4'  # 固定事件-开题
         elif self.round + 1 == 15:
-            next_event_id = 'f-5' # 固定事件-毕业
-        elif self.next_stochastic_event: # 存在未使用的关联事件
+            next_event_id = 'f-5'  # 固定事件-毕业
+        elif self.next_stochastic_event:  # 存在未使用的关联事件
             next_event_id = self.next_stochastic_event
-            self.next_stochastic_event = '' # 使用后清空
+            self.next_stochastic_event = ''  # 使用后清空
         else:
             next_event_id = self.get_random_event_id()
 
@@ -168,11 +168,11 @@ class Game:
         else:
             self.event_id = self.get_next_event(option)
             self.round += 1
-            self.energy += 3 # 增加体力
+            self.energy += 3  # 增加体力
 
     def plot_history(self):
         # plot
-        fig = plt.figure(figsize=(5,4))
+        fig = plt.figure(figsize=(5, 4))
         plt.plot(self.history['san'], label='SAN')
         plt.plot(self.history['wealth'], label='WEALTH')
         plt.plot(self.history['energy'], label='ENERGY')
@@ -191,6 +191,7 @@ class Game:
 game = Game()
 seed = None
 
+
 @app.route("/", methods=["GET", "POST"])
 def index():
     global seed
@@ -202,9 +203,9 @@ def index():
         return redirect(url_for("play"))
     return render_template("index.html")
 
+
 @app.route("/play", methods=["GET", "POST"])
 def play():
-
 
     if seed is None:
         return redirect(url_for("index"))
@@ -243,6 +244,7 @@ def play():
         return render_template("end.html", endings=endings, image_data=Markup(game.plot_history()))
     else:
         return render_template("play.html", state=state)
+
 
 if __name__ == '__main__':
     app.run(debug=True)
