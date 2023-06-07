@@ -2,7 +2,7 @@ import pandas as pd
 import json
 
 # read excel file
-file_path = './data/raw/事件-汇总.xlsx'
+file_path = './data/raw/事件-汇总-统一.xlsx'
 df = pd.read_excel(file_path, sheet_name='Sheet1')
 
 # create a dictionary to store the events and options
