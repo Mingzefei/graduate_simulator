@@ -49,12 +49,12 @@ class Game:
         # 结局（多个）
         self.endings = []
         # 事件库
-        with open('../data/processed/events.json', 'r', encoding='utf-8') as f:
+        with open('./data/processed/events.json', 'r', encoding='utf-8') as f:
             events_data = json.load(f)
             events_lib = events_data['events']
         self.events_lib = events_lib
         # 结局库
-        with open('../data/processed/endings.json', 'r', encoding='utf-8') as f:
+        with open('./data/processed/endings.json', 'r', encoding='utf-8') as f:
             endings_data = json.load(f)
             endings_lib = endings_data['endings']
         self.endings_lib = endings_lib
@@ -389,7 +389,7 @@ def end():
                 endings[e['description_short']] = e['description']
     endings = jsonify(endings).json
     print(game.history)
-    with open('../results/app.csv', 'a', newline='') as f:
+    with open('./results/app.csv', 'a', newline='') as f:
         writer = csv.writer(f)
         writer.writerow([seed, game.history])
     return render_template("end.html", endings=endings, image_data=Markup(game.plot_history()))
