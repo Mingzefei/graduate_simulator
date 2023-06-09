@@ -160,3 +160,6 @@ cython_debug/
 #.idea/
 .vscode/launch.json
 .vscode/settings.json
+
+results/app.csv
+results/app.log
